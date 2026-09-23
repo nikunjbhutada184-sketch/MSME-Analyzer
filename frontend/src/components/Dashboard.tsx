@@ -2,7 +2,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Search, Loader2, MapPin, Building2, TrendingUp, AlertCircle } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, CartesianGrid } from 'recharts';
-import MapChart from './MapChart';
 
 // Mock types
 type DistrictData = {
@@ -142,11 +141,6 @@ export default function Dashboard() {
 
             {/* Main Content Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-              {/* Map */}
-              <div className="lg:col-span-2">
-                <MapChart districts={districts} />
-              </div>
-
               {/* Chart */}
               <div className="bg-white p-6 rounded-xl border shadow-sm">
                 <h3 className="font-semibold mb-6">Top 10 Districts by Competition</h3>
